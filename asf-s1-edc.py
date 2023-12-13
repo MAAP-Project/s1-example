@@ -1,5 +1,7 @@
 import boto3
 import os
+import argparse
+import random
 
 from maap.maap import MAAP
 maap = MAAP()
@@ -32,8 +34,9 @@ def download_test(output:str):
         temporal='2023-06-01T00:00:00Z,2030-06-12T23:59:59Z'
         )
 
+    select = random.randrange(0,19,1)
     # pick a random granule
-    sample = results[3].getDownloadUrl()
+    sample = results[select].getDownloadUrl()
     # split into bucket and prefix
     split_path = os.path.split(sample)
     bucket = split_path[0].replace('s3://','')
@@ -45,10 +48,17 @@ def download_test(output:str):
     s3 = get_s3_client(asf_s3)
     
     #download
+    print(f"Downloading {prefix}")
     download_path = download_s3_file(s3, bucket, prefix, output)
     
     
 if __name__ == "__main__":
     # If we add args then parse them here
-    output = "output"
+    parser = argparse.ArgumentParser(description='Download a S1 scene')
+    parser.add_argument('--dest', dest="dest", type=str,
+                    help='A string to the output directory destination')
+    
+    args = parser.parse_args()
+    
+    output = args.dest
     download_test(output)
