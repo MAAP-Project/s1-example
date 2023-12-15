@@ -8,27 +8,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+<!-- 
+- Added Feature
+-->
 
-- Notebook Example
-- Core python script
-- Wrapper Shell script
+### Fixed
+<!-- 
+- Fixed Feature 
+-->
+
+### Changed
+<!-- 
+- Upgraded feature D.
+-->
+
+### Removed
+<!-- 
+- Removed feature
+-->
 
 ## [0.0.1] - 2023-01-01
 
 ### Added
 
-- Added feature A (#100).
-- Added feature B.
+- Notebook Example
+- Core python script
+- Wrapper Shell script
 
-### Fixed
-
-- Fixed bug A (#101).
-
-### Changed
-
-- Upgraded feature D.
-
-### Removed
-
-- Removed file A (#102).
-- Removed feature C (#103).

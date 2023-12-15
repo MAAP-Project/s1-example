@@ -34,9 +34,10 @@ def download_test(output:str):
         temporal='2023-06-01T00:00:00Z,2030-06-12T23:59:59Z'
         )
 
-    select = random.randrange(0,19,1)
     # pick a random granule
+    select = random.randrange(0,19,1)
     sample = results[select].getDownloadUrl()
+
     # split into bucket and prefix
     split_path = os.path.split(sample)
     bucket = split_path[0].replace('s3://','')
