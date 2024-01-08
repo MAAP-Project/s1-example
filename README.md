@@ -11,7 +11,8 @@ Repository Branch = main
 Run Command = s1-example/run.sh
 Build Command = s1-example/build.sh
 Algorithm Name = ASFDAACS3Test
-Disk Space (GB) = 10GB
+Description = Test S3 Access from ASF
+Disk Space (GB) = 10
 Resource Allocation = maap-dps-worker-8gb
 Container URL = mas.maap-project.org/root/maap-workspaces/base_images/vanilla:v3.1.3
 ```
