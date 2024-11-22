@@ -1,0 +1,13 @@
+algorithm_description: Test alg for S1 access at ASF
+algorithm_name: AFSDAACS3-s1
+algorithm_version: 0.1.1
+build_command: s1-example/build.sh
+disk_space: 10GB
+docker_container_url: mas.maap-project.org/root/maap-workspaces/base_images/pangeo:v4.1.1
+inputs:
+  config: []
+  file: []
+  positional: []
+queue: maap-dps-sandbox
+repository_url: https://github.com/MAAP-Project/s1-example.git
+run_command: s1-example/run.sh
